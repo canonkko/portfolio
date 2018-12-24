@@ -22,7 +22,7 @@
 .btn-auth {
   @include roboto('medium');
   border-width: 1px;
-  border-color: #ffffff;
+  border-color: #fff;
   border-style: solid;
   display: inline-block;
   color: #fff;
@@ -30,6 +30,12 @@
   position: absolute;
   top: 24px;
   right: 5.3%;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+    border-color: $blue;
+  }
 }
 
 .hero__user {
@@ -59,7 +65,7 @@
     }
 
   &__title {
-    font-size: 28px;
+    font-size: 35px;
     @include roboto('medium');
   }
 
