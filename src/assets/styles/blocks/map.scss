@@ -1,6 +1,26 @@
+.map {
+  position: relative;
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &__contacts {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .contacts {
   background-color: rgba(255, 255, 255, 0.7);
   max-width: 580px;
+  padding: 30px;
 
   &__list {
     display: flex;
@@ -16,8 +36,7 @@
 
   &__icon {
     background-position: center;
-    background-image: inline-svg('skype_n', $blue);
-    background-color: $blue;
+    background-color: #fff;
     border-radius: 50%;
     width: 45px;
     height: 45px;
@@ -26,6 +45,12 @@
     bottom: 0;
     top: 0;
     margin: auto;
+  }
+
+  &__icons {
+    fill: $blue;
+    width: 45px;
+    height: 45px;
   }
 
   &__link {

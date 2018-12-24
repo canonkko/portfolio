@@ -9,13 +9,16 @@ block scripts
 block content
   section.about-hero
     .about-hero__socials
-      ul.socials.socials_white
+      ul.socials
         li.socials__item
           a(href="https://vk.com/mruslanv" target="_blank").socials__link
+            +icon('vk', 'socials__icon')
         li.socials__item
           a(href="https://github.com/canonkko" target="_blank").socials__link
+            +icon('github', 'socials__icon')
         li.socials__item
           a(href="#0" target="_blank").socials__link
+            +icon('in', 'socials__icon')
     .about-hero__hamburger
       a(href="#0").hamburger
         span
@@ -67,20 +70,25 @@ block content
                 li.about__skill= val
   
 
-  section.map
+  section.map#map
+    img(src="assets/images/content/map.jpg", alt="map")
     .map__contacts
       .contacts
         h3.h3 Контакты
         ul.contacts__list
           li.contacts__item
             .contacts__icon
+              +icon('skype', 'contacts__icons')
             a.contacts__link(href="skype:canonkko?add") canonkko
           li.contacts__item
             .contacts__icon
+              +icon('phone_n', 'contacts__icons')
             a.contacts__link(href="tel:+79630184890") +7 963 018 48 90
           li.contacts__item
             .contacts__icon
-            a.contacts__link(href="mailto:ruslankko@gmail.com") ruslankko@gmail.com
+              +icon('envelope_n', 'contacts__icons')
+            a.contacts__link(href="mailto:ruslankko@gmail.com")  ruslankko@gmail.com
           li.contacts__item
             .contacts__icon
+              +icon('map_n', 'contacts__icons')
             | Пермь

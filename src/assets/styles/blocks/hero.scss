@@ -1,5 +1,5 @@
 .hero {
-  background: url("../../assets/images/bg/hero_bg.jpg") center no-repeat;
+  background: url("./assets/images/bg/hero_bg.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   color: #fff;
@@ -107,35 +107,36 @@
 // Socials
 .socials {
   margin: 0 -12px;
+  display: flex;
+  justify-content: center;
 
   &__item {
-    display: inline-block;
-    vertical-align: middle;
     margin: 0 12px;
   }
 
   &__link {
     width: 31px;
-    // height: 20px;
+    height: 20px;
     display: block;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // opacity: 0.8;
-    transition: opacity 0.3s ease;
-
+    opacity: 0.8;
+    
     &:hover {
       opacity: 1;
     }
   }
-
+  
   &__icon {
+    transition: opacity 0.3s ease;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    fill:#fff;
+
+    &:hover {
+      fill: $blue;
+    }
   }
 
-  &_white {
-    .socials__item {
-      
-    }
+  &_footer {
+    justify-content: flex-start;
   }
 }
