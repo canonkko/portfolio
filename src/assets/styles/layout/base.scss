@@ -106,7 +106,7 @@ button {
   text-align: center;
 
   &:hover {
-    background-color: lighten($blue, 10%);
+    background-color: #083c96;
     color: #fff;
   }
 
@@ -119,9 +119,17 @@ button {
   }
 
   &_link {
-    background-image: inline-svg('link', #fff);
     padding-left: 50px;
+    position: relative;
   }
+}
+
+.btn__icon {
+  position: absolute;
+  width: 20px;
+  height: 19px;
+  left: 18px;
+  fill: #fff;
 }
 
 .text-block {

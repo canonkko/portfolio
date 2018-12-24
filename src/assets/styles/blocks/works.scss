@@ -2,14 +2,16 @@
   display: flex;
 
   &__item {
-    flex: 1;
+    width: 50%;
+    text-align: center;
 
     &:first-child {
-      text-align: center;
       background-color: #f2f0e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &:last-child {
-      text-align: center;
       background-color: #e3e2de;
     }
   }
@@ -19,6 +21,56 @@
     color: rgba(8, 60, 150, 0.85);
     display: block;
     margin-bottom: 4%;
+  }
 
+  &__img {
+    padding: 5%;
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__arrow {
+    width: 50%;
+    position: relative;
+    border: none;
+
+    &:hover {
+      &::before {
+        opacity: 0.8;
+      }
+    }
+
+    &_up {
+      .arrow__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #ccc;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+    img {
+      width: 100%;
+    }
+    .arrow__icon {
+      width: 43px;
+      height: 27px;
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      margin-top: -21px;
+      margin-left: -13px;
+    }
   }
 }
