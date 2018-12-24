@@ -1,0 +1,69 @@
+extends ../main.layout.pug
+
+block content
+  section.about-hero#top
+    .about-hero__socials
+      ul.socials.socials_white
+        li.socials__item
+          a(href="https://vk.com/mruslanv" target="_blank").socials__link
+        li.socials__item
+          a(href="https://github.com/canonkko" target="_blank").socials__link
+        li.socials__item
+          a(href="#0" target="_blank").socials__link
+    .about-hero__hamburger
+      a(href="#0").hamburger
+        span
+    .about-hero__user
+      .user
+          .user__img
+            img(src='assets/images/content/author.jpg', alt='Руслан Мерзляков')
+          h1.user__title Руслан Мерзляков
+          .user__subtitle Личный сайт веб разработчика
+    .about-hero__arrow.about-hero__arrow_works
+      a(href="#0").arrow-down
+    .about-hero__title
+      h2.h2 Мои работы
+
+  section.works
+    .works__item
+      h3.h3 
+        | Сайт школы онлайн 
+        br
+        |  образования
+      span.works__tech HTML , CSS, JAVASCRIPT
+      a.btn.btn_link(href="#0") Посмотреть сайт
+    .works__item 123
+    
+  section.review
+    h2.h2 Что обо мне 
+      br
+      | говорят
+    ul.review__list
+      li.review__item
+        .review__avatar
+          img(src="assets/images/content/avatar_1.png", alt="Ковальчук Дмитрий")
+        .review__text
+          p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .review__author
+          p Ковальчук Дмитрий
+            span — основатель Loftschool
+      li.review__item
+        .review__avatar
+          img(src="assets/images/content/avatar_2.png", alt="Сабанцев Владимир")
+        .review__text
+          p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .review__author
+          p Сабанцев Владимир
+            span — преподаватель
+    
+    .form-box
+      h3.h3 Связаться со мной
+      form.form
+        input.form__input(type="text", placeholder="Ваше имя", name="name", required)
+        input.form__input(type="email", placeholder="Ваш email", name="email", required)
+        textarea.form__textarea(placeholder="Ваше сообщение", name="message", required)
+        .form__btns
+          button.btn Отправить
+          button(type="reset").btn.btn_trsp Очистить
+    .about-hero__arrow
+      a(href="#top").arrow-down

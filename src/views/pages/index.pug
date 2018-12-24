@@ -1,0 +1,34 @@
+extends ../auth.layout.pug
+
+block content
+  section.hero.section
+    .hero__btn
+      a.btn-auth(href="#0") Авторизоваться
+    .hero__user
+      .hero__row
+        .user
+          .user__img
+            img(src='assets/images/content/author.jpg', alt='Руслан Мерзляков')
+          h1.user__title Руслан Мерзляков
+          .user__subtitle Личный сайт веб разработчика
+      ul.socials
+        li.socials__item
+          a(href="https://vk.com/mruslanv" target="_blank").socials__link
+            +icon('vk', 'socials__icon')
+        li.socials__item
+          a(href="https://github.com/canonkko" target="_blank").socials__link
+            +icon('github', 'socials__icon')
+        li.socials__item
+          a(href="#0" target="_blank").socials__link
+            +icon('in', 'socials__icon')
+      .hero__links
+        ul.user-links
+          li.user-links__item
+            a(href="works.html").user-links__link Мои работы
+          li.user-links__item
+            a(href="about.html").user-links__link Обо мне
+          li.user-links__item
+            a(href="blog.html").user-links__link Блог
+    .hero__footer
+      p 
+        | &copy; Владимир Астахов | создано с любовью в LoftSchool | 2016

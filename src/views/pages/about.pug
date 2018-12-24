@@ -1,0 +1,86 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.about-hero
+    .about-hero__socials
+      ul.socials.socials_white
+        li.socials__item
+          a(href="https://vk.com/mruslanv" target="_blank").socials__link
+        li.socials__item
+          a(href="https://github.com/canonkko" target="_blank").socials__link
+        li.socials__item
+          a(href="#0" target="_blank").socials__link
+    .about-hero__hamburger
+      a(href="#0").hamburger
+        span
+    .about-hero__user
+      .user
+          .user__img
+            img(src='assets/images/content/author.jpg', alt='Руслан Мерзляков')
+          h1.user__title Руслан Мерзляков
+          .user__subtitle Личный сайт веб разработчика
+    .about-hero__arrow
+      a(href="#0").arrow-down
+
+
+  section.about
+    .about__row
+      .about__item
+        .about__desc
+          .about__title
+            h2.h2 Обо мне
+          .about__info
+            img(src="assets/images/content/author.jpg", alt="Руслан Мерзляков")
+            h3.h3 Кто я
+            .about__text
+              p Я веб-разработчик из Перми. Мне 35 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            .about__text 
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about__item
+        h3.h3 
+          | Чем я могу быть
+          br 
+          | вам полезен
+        .about__text
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        ul.skills
+          li.skills__item
+            h4.h4 Frontend
+            ul.about__list
+              each val in ["HTML5", "CSS3", "JavaScript & jQuery"]
+                li.about__skill= val
+          li.skills__item
+            h4.h4 Backend
+            ul.about__list
+              each val in ["PHP", "mySQL", "Node.js & npm", "Mongo.db"]
+                li.about__skill= val
+          li.skills__item
+            h4.h4 WorkFlow
+            ul.about__list
+              each val in ["Git", "Gulp", "npm"]
+                li.about__skill= val
+  
+
+  section.map
+    .map__contacts
+      .contacts
+        h3.h3 Контакты
+        ul.contacts__list
+          li.contacts__item
+            .contacts__icon
+            a.contacts__link(href="skype:canonkko?add") canonkko
+          li.contacts__item
+            .contacts__icon
+            a.contacts__link(href="tel:+79630184890") +7 963 018 48 90
+          li.contacts__item
+            .contacts__icon
+            a.contacts__link(href="mailto:ruslankko@gmail.com") ruslankko@gmail.com
+          li.contacts__item
+            .contacts__icon
+            | Пермь

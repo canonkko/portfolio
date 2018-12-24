@@ -1,0 +1,24 @@
+.works {
+  display: flex;
+
+  &__item {
+    flex: 1;
+
+    &:first-child {
+      text-align: center;
+      background-color: #f2f0e8;
+    }
+    &:last-child {
+      text-align: center;
+      background-color: #e3e2de;
+    }
+  }
+
+  &__tech {
+    @include roboto('medium');
+    color: rgba(8, 60, 150, 0.85);
+    display: block;
+    margin-bottom: 4%;
+
+  }
+}

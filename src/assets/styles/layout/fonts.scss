@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+
+
+@font-face {
+  font-family: 'sansuswebissimo';
+  src: url('/fonts/sansuswebissimo.woff') format('woff'),
+  url('/fonts/sansuswebissimo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+@mixin sansuswebissimo() {
+  font-family: 'sansuswebissimo', Helvetica, sans-serif;
+}
+
+
+@mixin roboto($style: 'regular') {
+  font-family: 'Roboto', Helvetica, sans-serif;
+
+  @if $style=='light' {
+    font-weight: 300;
+  }
+
+  @if $style=='regular' {
+    font-weight: 400;
+  }
+  
+  @if $style=='medium' {
+    font-weight: 500;
+  }
+
+  @if $style=='bold' {
+    font-weight: 700
+  }
+}
