@@ -10,15 +10,7 @@ block content
   section.about-hero
     .about-hero__socials
       ul.socials
-        li.socials__item
-          a(href="https://vk.com/mruslanv" target="_blank").socials__link
-            +icon('vk', 'socials__icon')
-        li.socials__item
-          a(href="https://github.com/canonkko" target="_blank").socials__link
-            +icon('github', 'socials__icon')
-        li.socials__item
-          a(href="#0" target="_blank").socials__link
-            +icon('in', 'socials__icon')
+        include ../common/socials.pug
     .about-hero__hamburger
       a(href="#0").hamburger
         span
