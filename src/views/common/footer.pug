@@ -6,24 +6,30 @@ footer.footer
       .footer__menu
         nav.nav
           ul.nav-menu
-            li.nav-menu__item
-              a.nav-menu__link(href="works.html") Мои работы
-            li.nav-menu__item
-              a.nav-menu__link(href="about.html") Обо мне
-            li.nav-menu__item
-              a.nav-menu__link(href="blog.html") Блог
-            li.nav-menu__item
-              a.nav-menu__link(href="#0") Авторизация
+            - 
+              var links = [
+                {
+                  link: 'works.html',
+                  text: 'Мои Работы'
+                },
+                {
+                  link: 'about.html',
+                  text: 'Обо мне'
+                },
+                {
+                  link: 'blog.html',
+                  text: 'Блог'
+                },
+                {
+                  link: '#0',
+                  text: 'Авторизация'
+                }
+              ]
+            each link in links
+              li.nav-menu__item
+                a.nav-menu__link(href=`${link.link}`)=link.text
       ul.socials.socials_footer
-        li.socials__item
-          a(href="https://vk.com/mruslanv" target="_blank").socials__link
-            +icon('vk', 'socials__icon')
-        li.socials__item
-          a(href="https://github.com/canonkko" target="_blank").socials__link
-            +icon('github', 'socials__icon')
-        li.socials__item
-          a(href="#0" target="_blank").socials__link
-            +icon('in', 'socials__icon')
+        include ./socials.pug
     .footer__item
       ul.footer-contacts
         li.footer-contacts__item

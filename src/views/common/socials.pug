@@ -1,0 +1,19 @@
+- 
+  var socials = [
+    {
+      link: 'https://vk.com/mruslanv',
+      icon: 'vk'
+    },
+    {
+      link: 'https://github.com/canonkko',
+      icon: 'github'
+    },
+    {
+      link: '#0',
+      icon: 'in'
+    }
+  ]
+each item in socials
+  li.socials__item
+    a(href=`${item.link}` target="_blank").socials__link
+      +icon(`${item.icon}`, 'socials__icon')
