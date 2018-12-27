@@ -1,4 +1,5 @@
 .map {
+  min-height: 700px;
   position: relative;
   img {
     width: 100%;
@@ -7,6 +8,7 @@
 
   &__contacts {
     position: absolute;
+    z-index: 5;
     top: 0;
     bottom: 0;
     right: 0;
