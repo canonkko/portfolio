@@ -125,13 +125,13 @@
 
 .about {
   background-color: #f2f0e8;
+  position: relative;
 
   &__row {
     display: flex;
   }
 
   &__item {
-    position: relative;
     width: 50%;
     padding: 0 30px;
 
@@ -145,9 +145,10 @@
     bottom: 100%;
     left: 0;
     right: 0;
+    height: 20%;
     svg {
       width: 100%;
-      height: 160px;
+      height: 100%;
       display: block;
     }
   }

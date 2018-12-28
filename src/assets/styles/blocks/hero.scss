@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   &__row {
+    display: inline-block;
     margin-bottom: 20px;
   }
   &__footer {
@@ -43,7 +44,7 @@
   background-color: rgba(28, 31, 41, 0.5);
   width: 100%;
   max-width: 380px;
-  padding: 2%;
+  padding: 1.5%;
   padding-bottom: 85px;
   position: relative;
 }
@@ -125,12 +126,12 @@
     height: 20px;
     display: block;
     opacity: 0.8;
-    
+
     &:hover {
       opacity: 1;
     }
   }
-  
+
   &__icon {
     transition: opacity 0.3s ease;
     max-width: 100%;

@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 1300px) {
+  .about {
+
+    &__row {
+      display: block;
+    }
+
+    &__item {
+      width: 100%;
+      display: block;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    &__desc {
+      display: block;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__info {
+      width: 100%;
+      max-width: 440px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    &__list {
+      justify-content: center;
+    }
+
+    &__triangle {
+      height: 10%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  .about {
+
+    &__triangle {
+      height: 7%;
+    }
+  }
+}
