@@ -146,6 +146,12 @@
     left: 0;
     right: 0;
     height: 20%;
+    &._left {
+      right: 50%;
+    }
+    &._right {
+      left: 50%;
+    }
     svg {
       width: 100%;
       height: 100%;

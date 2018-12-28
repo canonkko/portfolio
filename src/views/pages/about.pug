@@ -28,11 +28,14 @@ block content
 
 
   section.about
+    .about__triangle._left
+      svg(viewBox='0 0 100 100', preserveAspectRatio='none')
+        polygon(fill='#f2f0e8', points='0,100 0,0 100,100')
+    .about__triangle._right
+      svg(viewBox='0 0 100 100', preserveAspectRatio='none')
+        polygon(fill='#eae8e2', points='100,100 0,100 100,0')
     .about__row
       .about__item
-        .about__triangle
-          svg(width='100%', height='100px', viewBox='0 0 100 100', preserveAspectRatio='none')
-            polygon(fill='#f2f0e8', points='0,100 0,0 100,100')
         .about__desc
           .about__title
             h2.h2 Обо мне
@@ -44,9 +47,6 @@ block content
             .about__text 
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
       .about__item
-        .about__triangle
-          svg(viewBox='0 0 100 100', preserveAspectRatio='none')
-            polygon(fill='#eae8e2', points='100,100 0,100 100,0')
         h3.h3 
           | Чем я могу быть
           br 

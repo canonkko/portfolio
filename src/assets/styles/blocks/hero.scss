@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   &__row {
-    display: inline-block;
     margin-bottom: 20px;
   }
   &__footer {
@@ -17,6 +16,11 @@
     left: 0;
     right: 0;
     @include roboto('light');
+  }
+  &__auth {
+    position: absolute;
+    top: 24px;
+    right: 5.3%;
   }
 }
 
@@ -28,9 +32,7 @@
   display: inline-block;
   color: #fff;
   padding: 10px 27px;
-  position: absolute;
-  top: 24px;
-  right: 5.3%;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $blue;
@@ -44,7 +46,7 @@
   background-color: rgba(28, 31, 41, 0.5);
   width: 100%;
   max-width: 380px;
-  padding: 1.5%;
+  padding: 30px 20px;
   padding-bottom: 85px;
   position: relative;
 }
@@ -146,4 +148,134 @@
   &_footer {
     justify-content: flex-start;
   }
+}
+
+
+.auth {
+
+  .h3 {
+    &::after {
+      display: none;
+    }
+  }
+
+  &-form {
+
+    &__title {
+      @include roboto('bold');
+      margin-bottom: 10px;
+    }
+
+    &__checkbox {
+      display: none;
+
+      &:checked {
+        + label::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__label-checkbox {
+      position: relative;
+      padding-left: 25px;
+      font-weight: 400;
+      &::before {
+        position: absolute;
+        left: 0;
+        content: '';
+        border-radius: 2px;
+        background-color: $blue;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        background: url(./assets/images/content/check.svg) center no-repeat;
+        background-size: 12px 9px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+
+    &__radio {
+      display: none;
+
+      &:checked {
+        + label::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__label-radio {
+      position: relative;
+      padding-left: 30px;
+      font-weight: 400;
+      margin: 0 20px;
+      &::before {
+        position: absolute;
+        left: 0;
+        content: '';
+        border-radius: 50%;
+        border-width: 1px;
+        border-color:  #cccccc;
+        border-style: solid;
+        background-color:  #ffffff;
+        width: 19px;
+        height: 19px;
+        cursor: pointer;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+        background-color:  #0548be;
+        width: 21px;
+        height: 21px;
+        border: 6px solid #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+
+    &__row {
+      margin-bottom: 20px;
+    }
+
+    &-group {
+      display: flex;
+    }
+
+    &__input {
+      width: 100%;
+      max-width: 295px;
+      outline: none;
+      border: none;
+      padding: 0 20px;
+
+      &-icon {
+        background-color:  #f0efe9;
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+      }
+    }
+  }
+
+}
+
+.input__icon {
+  max-width: 18px;
+  max-height: 18px;
+  fill: #c5ccce;
 }

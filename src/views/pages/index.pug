@@ -2,8 +2,48 @@ extends ../auth.layout.pug
 
 block content
   section.hero.section
-    .hero__btn
+    .hero__auth
       a.btn-auth(href="#0") Авторизоваться
+    .hero__user(style="display:none")
+      .hero__row
+        .auth
+          h3.h3 Авторизуйтесь
+          form.auth-form
+            .auth-form__row
+              .auth-form-group
+                .auth-form__input-icon
+                  +icon('login', 'input__icon')
+                input.auth-form__input(type="text" name="login" placeholder="Логин")
+            .auth-form__row
+              .auth-form-group
+                .auth-form__input-icon
+                  +icon('password', 'input__icon')
+                input.auth-form__input(type="password" name="password" placeholder="Пароль")
+            .auth-form__row
+              input.auth-form__checkbox#human(type="checkbox" name="human")
+              label.auth-form__label-checkbox(for="human") Я человек
+            .auth-form__row
+              h4.auth-form__title Вы точно не робот?
+              input.auth-form__radio#robot(type="radio" name="robot" checked)
+              label.auth-form__label-radio(for="robot") Да
+              input.auth-form__radio#robot2(type="radio" name="robot")
+              label.auth-form__label-radio(for="robot2") Не уверен
+      .hero__links
+        ul.user-links
+          - 
+            var links = [
+              {
+                link: '/',
+                text: 'На главную'
+              },
+              {
+                link: '#0',
+                text: 'Войти'
+              }
+            ]
+          each link in links
+            li.user-links__item
+              a(href=`${link.link}`).user-links__link=link.text
     .hero__user
       .hero__row
         .user
