@@ -3,8 +3,15 @@ extends ../main.layout.pug
 block variables
   - var title = 'Мои работы'
 
+block scripts
+  script(src='works.bundle.js')
+
 block content
-  section.about-hero#top
+  section.about-hero
+    .hero__bg
+      img(src="assets/images/bg/hero_bg.jpg", alt="")
+    .hero__uzor
+      img.hero__img(src="assets/images/content/uzor.png", alt="")
     .about-hero__socials
       ul.socials
         include ../common/socials.pug
@@ -18,32 +25,14 @@ block content
         h1.user__title Руслан Мерзляков
         .user__subtitle Личный сайт веб разработчика
     .about-hero__arrow.about-hero__arrow_works
-      a(href="#works").arrow-down
+      a(href="#0").arrow-down
         +icon('arrow_down', 'arrow__icon')
-    .about-hero__title
-      h2.h2 Мои работы
-    img.about-hero__line(src="assets/images/bg/works_header.png", alt="")
 
-  section.works#works
-    .works__item
-      .works__info
-        h3.h3 
-          | Сайт школы онлайн 
-          br
-          |  образования
-        span.works__tech HTML , CSS, JAVASCRIPT
-        a.btn.btn_link(href="#0") Посмотреть сайт
-          +icon('link', 'btn__icon')
-    .works__item
-      .works__img
-        img(src="assets/images/content/work_img.png", alt="")
-      .works__btns
-        button.works__arrow.works__arrow_down(type="button")
-          +icon('arrow_down', 'arrow__icon')
-          img(src="assets/images/content/work_img.png", alt="")
-        button.works__arrow.works__arrow_up(type="button")
-          +icon('arrow_down', 'arrow__icon')
-          img(src="assets/images/content/work_img.png", alt="")
+  section.works#anchor
+    .works__title
+      h2.h2 Мои работы
+      img.works__line(src="assets/images/bg/works_header.png", alt="")
+    #slider-component
       
     
   section.review
@@ -78,5 +67,5 @@ block content
           button.btn Отправить
           button(type="reset").btn.btn_trsp Очистить
     .about-hero__arrow
-      a(href="#top").arrow-down
+      a(href="#0").arrow-down
         +icon('arrow_down', 'arrow__icon')

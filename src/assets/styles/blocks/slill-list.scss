@@ -1,0 +1,25 @@
+.skills {
+
+  &-list {
+    font-weight: 500;
+    font-size: 14px;
+    color: #243994;
+    display: flex;
+    margin: 20px -15px 30px;
+
+    &__item {
+      font-size: 14px;
+      text-align: center;
+      position: relative;
+      margin: 0 20px;
+      span {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+}

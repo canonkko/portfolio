@@ -10,6 +10,10 @@ block scripts
 
 block content
   section.about-hero
+    .hero__bg
+      img(src="assets/images/bg/hero_bg.jpg", alt="")
+    .hero__uzor
+      img.hero__img(src="assets/images/content/uzor.png", alt="")
     .about-hero__socials
       ul.socials
         include ../common/socials.pug
@@ -18,16 +22,16 @@ block content
         span
     .about-hero__user
       .user
-          .user__img
-            img(src='assets/images/content/author.jpg', alt='Руслан Мерзляков')
-          h1.user__title Руслан Мерзляков
-          .user__subtitle Личный сайт веб разработчика
+        .user__img
+          img(src='assets/images/content/author.jpg', alt='Руслан Мерзляков')
+        h1.user__title Руслан Мерзляков
+        .user__subtitle Личный сайт веб разработчика
     .about-hero__arrow
       a(href="#0").arrow-down
         +icon('arrow_down', 'arrow__icon')
 
 
-  section.about
+  section.about#anchor
     .about__triangle._left
       svg(viewBox='0 0 100 100', preserveAspectRatio='none')
         polygon(fill='#f2f0e8', points='0,100 0,0 100,100')
@@ -53,76 +57,11 @@ block content
           | вам полезен
         .about__text
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-        ul.skills
-          li.skills__item
-            h4.h4 Frontend
-            ul.about__list
-              li.skills-row 
-                span HTML5
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="0")
-              li.skills-row
-                span CSS3
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="25")
-              li.skills-row
-                span 
-                  | JavaScript 
-                  br
-                  | & jQuery
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="35")
-          li.skills__item
-            h4.h4 Backend
-            ul.about__list
-              li.skills-row 
-                span PHP
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="0")
-              li.skills-row
-                span mySQL
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 40", stroke-dashoffset="25")
-              li.skills-row
-                span 
-                  | Node.js 
-                  br
-                  | & npm
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="35")  
-              li.skills-row
-                span Mongo.db
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 20", stroke-dashoffset="45")
-          li.skills__item
-            h4.h4 WorkFlow
-            ul.about__list
-              li.skills-row 
-                span Git
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 10", stroke-dashoffset="0")
-              li.skills-row
-                span Gulp
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 20", stroke-dashoffset="35")
-              li.skills-row
-                span npm
-                svg.donut(width='120px', height='120px', viewBox='0 0 42 42')
-                  circle.donut-ring(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#e0ddd6', stroke-width='6')
-                  circle.donut-segment(cx='21', cy='21', r='15.91549430918954', fill='transparent', stroke='#004cd1', stroke-width='6', stroke-dasharray="85 25", stroke-dashoffset="35")
+        #skills-component
+        
   
 
   section.map#map
-    //- img(src="assets/images/content/map.jpg", alt="map")
     .map__contacts
       .contacts
         h3.h3 Контакты

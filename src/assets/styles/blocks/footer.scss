@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   color: #fff;
-  @include roboto('light');
+  font-weight: 300;
   // margin-top: -200px;
 
   &__body {
@@ -42,7 +42,7 @@
   &__bottom {
     background-color: rgba(8, 60, 150, 0.85);
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 15px;
   }
 }
 
@@ -50,11 +50,10 @@
 // Footer menu
 .nav-menu {
   display: flex;
-  margin: 0 -20px;
-  @include roboto('bold');
-
+  margin: 0 -15px;
+  font-weight: 700;
   &__item {
-    margin: 0 20px;
+    margin: 0 15px;
   }
 
   &__link {

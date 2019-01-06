@@ -3,8 +3,15 @@ extends ../main.layout.pug
 block variables
   - var title = 'Блог'
 
+block scripts
+  script(src='blog.bundle.js')
+
 block content
   section.about-hero
+    .hero__bg
+      img(src="assets/images/bg/hero_bg.jpg", alt="")
+    .hero__uzor
+      img.hero__img(src="assets/images/content/uzor.png", alt="")
     .about-hero__socials
       ul.socials
         include ../common/socials.pug

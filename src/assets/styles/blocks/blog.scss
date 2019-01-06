@@ -2,8 +2,10 @@
   display: flex;
   justify-content: center;
   background-color: #faf8f0;
+  padding: 0 15px;
   padding-top: 50px;
   position: relative;
+  width: 100%;
 
   &__triangle {
     position: absolute;
@@ -22,6 +24,10 @@
     border-bottom: 4px solid rgba(55, 62, 66, 0.07);
     padding-bottom: 65px;
     margin-bottom: 60px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
     &:last-child {
       border-bottom: none;
@@ -42,7 +48,7 @@
 }
 
 .sidebar {
-  width: 100%;
+  width: 30%;
   max-width: 265px;
   margin-right: 5%;
   padding-top: 15px;
@@ -56,7 +62,7 @@
     position: relative;
 
     &.active {
-      @include roboto('bold');
+      font-weight: 700;
       .nav-sidebar__link {
         color: rgba(8, 60, 150, 0.85);
       }
@@ -84,6 +90,6 @@
   }
 
 .main {
-  width: 100%;
+  width: 65%;
   max-width: 880px;
 }
