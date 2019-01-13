@@ -1,0 +1,26 @@
+.overlay-menu.js-overlay-menu
+  .overlay-menu__box
+    nav.nav
+      ul.nav-menu.fixed
+        - 
+          var links = [
+            {
+              link: 'works.html',
+              text: 'Мои Работы'
+            },
+            {
+              link: 'about.html',
+              text: 'Обо мне'
+            },
+            {
+              link: 'blog.html',
+              text: 'Блог'
+            },
+            {
+              link: '/',
+              text: 'Авторизация'
+            }
+          ]
+        each link in links
+          li.nav-menu__item
+            a.nav-menu__link(href=`${link.link}`)=link.text
