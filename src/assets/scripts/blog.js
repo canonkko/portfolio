@@ -1,2 +1,2 @@
-import './modules/hamburger'
+import './modules/menu';
 import './modules/parallax'

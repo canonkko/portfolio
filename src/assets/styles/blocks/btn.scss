@@ -15,4 +15,8 @@
     color: #fff;
     border-color: $blue;
   }
+
+  &.hidden {
+    display: none;
+  }
 }
