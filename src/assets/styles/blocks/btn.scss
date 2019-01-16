@@ -1,0 +1,18 @@
+.btn-auth {
+  font-weight: 500;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 27px;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  text-align: center;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+    border-color: $blue;
+  }
+}

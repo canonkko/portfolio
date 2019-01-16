@@ -1,0 +1,35 @@
+.socials {
+  margin: 0 -12px;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin: 0 12px;
+  }
+
+  &__link {
+    width: 31px;
+    height: 20px;
+    display: block;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+    fill:#fff;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+
+  &_footer {
+    justify-content: flex-start;
+  }
+}
