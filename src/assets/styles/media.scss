@@ -131,6 +131,10 @@
     &__item {
       margin: 0 5px;
     }
+
+    &.fixed {
+      font-size: 50px;
+    }
   }
   .socials_footer {
     justify-content: center;
@@ -173,5 +177,18 @@
       text-align: center;
     }
     
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .h2 {
+    font-size: 50px;
+  }
+  .hero__cart {
+    width: 305px;
+  }
+
+  .nav-menu.fixed {
+    font-size: 35px;
   }
 }

@@ -15,7 +15,7 @@ function init () {
     {},
     {
       iconLayout: 'default#image',
-      iconImageHref: '../images/icons/map_n.svg',
+      iconImageHref: './assets/images/content/map_n.svg',
       iconImageSize: [61, 58],
       iconImageOffset: [-45, -72]
     }
